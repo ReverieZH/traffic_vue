@@ -82,7 +82,39 @@ const checkout={
   }
 }
 
-
+const exemptCheck={
+  state:{
+     plateNumber:'Y3213',
+     exemptFormData:{
+       plateNumber:'',
+       endTime:'',
+       insurancePhotoUrl:'',
+       taxPhotoUrl:''
+     },
+     post:{
+     }
+  },
+  mutations:{
+     updateFormData(state,payload){
+       state.exemptFormData.plateNumber=payload.plateNumber
+       state.exemptFormData.endTime=payload.endTime
+     },
+    updateInsurancePhotoUrl(state, payload) {
+      state.exemptFormData.insurancePhotoUrl=payload
+    },
+    updateTaxPhotoUrl(state, payload) {
+      state.exemptFormData.taxPhotoUrl=payload
+    }
+  },
+  getters:{
+    getPlateNumber(state){
+      return state.plateNumber
+    },
+    getExemptFormData(state){
+      return state.exemptFormData
+    },
+  }
+}
 
 //2.创建对象
 const store=new Vuex.Store({
@@ -129,7 +161,8 @@ const store=new Vuex.Store({
   },
   modules:{
       plateApply:plateApply,
-      checkout:checkout
+      checkout:checkout,
+      exemptCheck:exemptCheck
   }
 
 })

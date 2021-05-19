@@ -18,13 +18,19 @@
             <div  v-else-if="scope.row.status==3" style="color:green">选号成功</div>
          </template>
       </el-table-column>
-      <el-table-column prop="address" label="查看">
+<!--      <el-table-column prop="address" label="查看">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" type="text" size="small">查看详情</el-button>
         </template>
-      </el-table-column>
+      </el-table-column>-->
     </el-table>
-
+    <div style="padding-top: 5px">
+      <el-pagination
+          background
+          layout="prev, pager, next"
+          :total="total">
+      </el-pagination>
+    </div>
     <div style="text-align: center;padding-top: 20px">
       <el-button type="primary"  @click="apply">添加申请</el-button>
     </div>
@@ -38,7 +44,8 @@ export default {
   name: "UserCheck",
   data(){
     return {
-      tableData:[]
+      tableData:[],
+      total:100
     }
   },
   methods:{
@@ -51,7 +58,7 @@ export default {
       })
     },
     apply(){
-      this.$router.push('baseInfo')
+      this.$router.replace('read')
     }
   },
   created() {

@@ -65,7 +65,7 @@
             </a>
           </li>
           <li>
-            <a href="noCarCheck.html" target="framName">
+            <a @click="ExemptCheckClick" target="framName">
               <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
               <p>免检车申领检验标志</p>
             </a>
@@ -174,6 +174,9 @@ export default {
     },
     userCheckClick(){
       this.$router.replace("applyCheck/userCheck")
+    },
+    ExemptCheckClick(){
+      this.$router.replace("exemptCheck/read")
     }
   }
 }

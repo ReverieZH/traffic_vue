@@ -11,7 +11,8 @@ import InputPlateNumber from "@/views/vechiles/plateNumber/InputPlateNumber";
 import ApplyStatus from "@/views/vechiles/plateNumber/ApplyStatus";
 import choosedPlateNumber from "@/views/vechiles/plateNumber/choosedPlateNumber";
 import UserApply from "@/views/vechiles/plateNumber/UserApply";
-import Read from "@/views/vechiles/checkout/Read";
+import CheckOutRead from "@/views/vechiles/checkout/CheckOutRead";
+
 import ApplyCheckInfo from "@/views/vechiles/checkout/ApplyCheckInfo";
 import ChooseDate from "@/views/vechiles/checkout/ChooseDate";
 import ChooseCheckStation from "@/views/vechiles/checkout/ChooseCheckStation";
@@ -19,6 +20,10 @@ import ConfirmApplyCheck from "@/views/vechiles/checkout/ConfirmApplyCheck";
 import ChooseTimePeriods from "@/views/vechiles/checkout/ChooseTimePeriods";
 import CompleteReserve from "@/views/vechiles/checkout/CompleteReserve";
 import UserCheck from "@/views/vechiles/checkout/UserCheck";
+import UploadImage from "@/views/vechiles/exemptCheck/UploadImage";
+import ExemptRead from "@/views/vechiles/exemptCheck/ExemptRead";
+import ExemptCheckInfo from "@/views/vechiles/exemptCheck/ExemptCheckInfo";
+import ChoosePost from "@/views/vechiles/exemptCheck/ChoosePost";
 /*
 
 const Home =() => import('../views/home/Home')
@@ -81,7 +86,7 @@ const routes=[
             },
             {
                 path: 'applyCheck/read',
-                component: Read
+                component: CheckOutRead
             },
             {
                 path: 'applyCheck/baseInfo',
@@ -109,9 +114,26 @@ const routes=[
             {
                 path: "applyCheck/userCheck",
                 component: UserCheck,
+            },
+            {
+                path: 'exemptCheck/read',
+                component: ExemptRead
+            },
+            {
+                path: "exemptCheck/info",
+                component: ExemptCheckInfo
+            },
+            {
+                path: "exemptCheck/choosePost",
+                component: ChoosePost
             }
         ]
-    }
+    },
+    {
+    path: '/img',
+        component: UploadImage
+    },
+
 ]
 
 const router =new VueRouter({
