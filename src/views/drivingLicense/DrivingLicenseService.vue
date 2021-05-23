@@ -28,12 +28,6 @@
               <p>取消异地考试预约</p>
             </a>
           </li>
-          <!--<li>
-              <a href="keynoteCar.html" target="framName">
-              <div class="img"><img src="img/333_07.png"></div>
-              <p>机动车检验预约 </p>
-                  </a>
-          </li>-->
           <div class="clear"></div>
         </ul>
       </div>
@@ -71,36 +65,6 @@
               <p>遗失补证</p>
             </a>
           </li>
-          <!--<li>
-              <a href="firstInterCar.html" target="framName">
-              <div class="img"><img src="img/333_05.png"></div>
-              <p>首次入城分析</p>
-                  </a>
-          </li>
-          <li>
-              <a href="frequently.html" target="framName">
-              <div class="img"><img src="img/333_07.png"></div>
-              <p>频繁过车分析</p>
-                  </a>
-          </li>
-          <li>
-              <a href="nightCar.html" target="framName">
-              <div class="img"><img src="img/333_03.png"></div>
-              <p>频繁夜行车分析</p>
-                  </a>
-          </li>
-          <li>
-              <a href="nightDay.html" target="framName">
-              <div class="img"><img src="img/333_05.png"></div>
-              <p>昼伏夜出车分析</p>
-                  </a>
-          </li>
-          <li>
-              <a href="peerCar.html" target="framName">
-              <div class="img"><img src="img/22_03.png"></div>
-              <p>同行车分析</p>
-                  </a>
-          </li>-->
           <div class="clear"></div>
         </ul>
       </div>
@@ -110,7 +74,6 @@
         <h6>延期业务</h6>
         <div class="clear"></div>
       </div>
-
       <div class="div">
         <ul>
           <li>
@@ -131,30 +94,39 @@
               <p>延期提交身体条件证明</p>
             </a>
           </li>
-          <!-- <li>
-               <a href="controlRecord.html" target="framName">
-               <div class="img"><img src="img/333_07.png"></div>
-               <p>布控历史记录</p>
-                   </a>
-           </li>
-           <li>
-               <a href="alarmRecord.html" target="framName">
-               <div class="img"><img src="img/333_05.png"></div>
-               <p>布控报警记录</p>
-                   </a>
-           </li>-->
           <div class="clear"></div>
         </ul>
       </div>
     </div>
-
+<!--    <div class="home_div">-->
+<!--      <div class="title-bar title-bar-ex">-->
+<!--        <h6>驾驶证业务</h6>-->
+<!--        <div class="clear"></div>-->
+<!--      </div>-->
+<!--      <div class="div">-->
+<!--        <ul>-->
+<!--          <li>-->
+<!--            <a   @click="bindDrivingLicence" target="framName">-->
+<!--              <div class="img"><img src="@/assets/img/weifachuli.png"></div>-->
+<!--              <p>绑定驾驶证</p>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <div class="clear"></div>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
 
   </div>
 </template>
 
 <script>
 export default {
-  name: "DrivingLicenseService"
+  name: "DrivingLicenseService",
+  methods:{
+    bindDrivingLicence(){
+      this.$router.replace("drivingLicence/bind")
+    }
+  }
 }
 </script>
 

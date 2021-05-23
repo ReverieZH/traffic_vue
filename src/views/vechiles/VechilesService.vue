@@ -70,6 +70,12 @@
               <p>免检车申领检验标志</p>
             </a>
           </li>
+          <li>
+            <a @click="UserExemptCheckClick" target="framName">
+              <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
+              <p>我的免检车申领</p>
+            </a>
+          </li>
           <!--<li>
               <a href="firstInterCar.html" target="framName">
               <div class="img"><img src="img/333_05.png"></div>
@@ -177,6 +183,9 @@ export default {
     },
     ExemptCheckClick(){
       this.$router.replace("exemptCheck/read")
+    },
+    UserExemptCheckClick(){
+      this.$router.replace("exemptCheck/userApply")
     }
   }
 }

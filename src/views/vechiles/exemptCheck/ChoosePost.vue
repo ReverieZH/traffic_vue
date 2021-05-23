@@ -65,6 +65,17 @@
       <el-button type="primary" @click="submit()">提交</el-button>
     </div>
   </div>
+    <el-dialog
+        title="提示"
+        :visible.sync="dialogVisible"
+        width="30%"
+        :before-close="handleClose">
+      <span>申请失败</span>
+      <span slot="footer" class="dialog-footer">
+                  <el-button @click="dialogVisible = false">取 消</el-button>
+                  <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+        </span>
+    </el-dialog>
 </div>
 </template>
 
@@ -78,6 +89,7 @@ export default {
   data(){
     return {
       isDisable:false,
+      dialogVisible:false,
       post:{
         isNeedPaper:'',
         accessMethod:'',
@@ -91,6 +103,13 @@ export default {
     }
   },
   methods:{
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+          .then(_ => {
+            done();
+          })
+          .catch(_ => {});
+    },
     handleChange() {
       var loc = "";
       for (let i = 0; i < this.selectedOptions.length; i++) {
@@ -124,9 +143,18 @@ export default {
               username:this.$store.getters.getUsername
             }
         }).then(res=>{
-
+            if(res.issuccess){
+              this.$router.push({
+                path:'viewInfo',
+                query: {
+                  acNumber: res.acNumber,
+                }
+              })
+            }else{
+              this.dialogVisible = true
+            }
         }).catch(err=>{
-
+              this.dialogVisible = true
         })
     }
   },

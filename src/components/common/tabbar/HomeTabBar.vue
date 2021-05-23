@@ -13,25 +13,11 @@
         <tab-bar-item path="/home"><a slot="item-text">首页</a></tab-bar-item>
         <tab-bar-item path="/service"><a slot="item-text">服务</a></tab-bar-item>
         <tab-bar-item path="/message"><a slot="item-text">信息查询</a></tab-bar-item>
-        <tab-bar-item path="/navigate"><a slot="item-text">服务导航</a></tab-bar-item>
 <!--        <li :class="{'layui-nav-item':true,'layui-this':isHome }"></li>
         <li :class="{'layui-nav-item':true,'layui-this':isService }" ><a href="" @click="serviceClick">业务办理</a></li>
                 <li :class="{'layui-nav-item':true,'layui-this':isMessage }"><a href="">信息查询</a></li>-->
       </ul>
 
-      <ul class="layui-nav layui-layout-right" v-if="isLogin=='1'">
-        <li class="layui-nav-item">
-          <a href="javascript:;">
-            <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
-            {{ this.$store.getters.getUsername }}
-          </a>
-        </li>
-        <li class="layui-nav-item"><a @click="signOut" >登出</a></li>
-      </ul>
-      <ul class="layui-nav layui-layout-right" v-else>
-        <li class="layui-nav-item"><a @click="signUp">登录</a></li>
-        <li class="layui-nav-item"><a @click="register">注册</a></li>
-      </ul>
     </div>
   </div>
 </template>
@@ -39,10 +25,9 @@
 <script>
 import TabBarItem from "@/components/common/tabbar/TabBarItem";
 export default {
-  name: "TabBar",
+  name: "HomeTabBar",
   data(){
     return {
-      isLogin:sessionStorage.getItem('isLogin'),
       num:0,
         lis:[{
           name:'首页',
@@ -69,17 +54,6 @@ export default {
       }else if(index==1){
         this.$router.replace('/service')
       }
-    },
-    signOut(){
-        sessionStorage.removeItem('username')
-        sessionStorage.removeItem('isLogin')
-        this.$router.replace('/home')
-    },
-    signUp(){
-      this.$router.replace('/login')
-    },
-    register(){
-      this.$router.replace('/register')
     }
   },
   computed:{

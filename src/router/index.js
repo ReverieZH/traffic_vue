@@ -24,6 +24,20 @@ import UploadImage from "@/views/vechiles/exemptCheck/UploadImage";
 import ExemptRead from "@/views/vechiles/exemptCheck/ExemptRead";
 import ExemptCheckInfo from "@/views/vechiles/exemptCheck/ExemptCheckInfo";
 import ChoosePost from "@/views/vechiles/exemptCheck/ChoosePost";
+import UserExemptCheck from "@/views/vechiles/exemptCheck/UserExemptCheck";
+import ViewApplyInfo from "@/views/vechiles/exemptCheck/ViewApplyInfo";
+import DrivingLicenceBind from "@/views/drivingLicense/bind/DrivingLicenceBind";
+import DrivingLicenceInfo from "@/views/drivingLicense/info/DrivingLicenceInfo";
+import IllegalProcessService from "@/views/IllegalProcess/IllegalProcessService";
+import VechileBind from "@/views/vechiles/bind/VechileBind";
+import MonitorProcess from "@/views/IllegalProcess/monitorProcess/MonitorProcess";
+import IllegalList from "@/views/IllegalProcess/monitorProcess/IllegalList";
+import IllegalProcessRead from "@/views/IllegalProcess/monitorProcess/IllegalProcessRead";
+import IllegalInfo from "@/views/IllegalProcess/monitorProcess/IllegalInfo";
+import Login from "@/views/login/Login";
+import Test from "@/Test";
+import HomeTrafficService from "@/views/HomeTrafficService";
+import Register from "@/views/login/Register";
 /*
 
 const Home =() => import('../views/home/Home')
@@ -48,97 +62,251 @@ const routes=[
     },
     {
         path: '/service',
-        component: trafficService,
+        component: HomeTrafficService,
     },{
         path: '/loginHome',
         component: loginHome,
         children:[
             {
                 path:'vs',
-                component:VechilesService
+                component:VechilesService,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path:'dl',
-                component:DrivingLicenseService
+                component:DrivingLicenseService,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: 'cpn',
                 component: choosePlateNumber,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: 'baseInfo',
                 component: BaseInfo,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: 'inputInfo',
-                component: InputPlateNumber
+                component: InputPlateNumber,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: 'applyStatus',
-                component: ApplyStatus
+                component: ApplyStatus,
+                meta: {
+                    requireAuth: true
+                },
             },{
                 path: 'choosedNumber',
-                component: choosedPlateNumber
+                component: choosedPlateNumber,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: 'userApply',
-                component: UserApply
+                component: UserApply,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: 'applyCheck/read',
-                component: CheckOutRead
+                component: CheckOutRead,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: 'applyCheck/baseInfo',
-                component:ApplyCheckInfo
+                component:ApplyCheckInfo,
+                meta: {
+                    requireAuth: true
+                },
             },{
                 path: 'applyCheck/chooseDate',
-                component: ChooseDate
+                component: ChooseDate,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: "applyCheck/chooseStation",
                 component: ChooseCheckStation,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: "applyCheck/choosePeriods",
                 component: ChooseTimePeriods,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: "applyCheck/confirm",
                 component: ConfirmApplyCheck,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: "applyCheck/complete",
                 component: CompleteReserve,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: "applyCheck/userCheck",
                 component: UserCheck,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: 'exemptCheck/read',
-                component: ExemptRead
+                component: ExemptRead,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: "exemptCheck/info",
-                component: ExemptCheckInfo
+                component: ExemptCheckInfo,
+                meta: {
+                    requireAuth: true
+                },
             },
             {
                 path: "exemptCheck/choosePost",
-                component: ChoosePost
+                component: ChoosePost,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path: "exemptCheck/userApply",
+                component: UserExemptCheck,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path: "exemptCheck/viewInfo",
+                component: ViewApplyInfo,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"drivingLicence/bind",
+                component: DrivingLicenceBind,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"drivingLicence/info",
+                component: DrivingLicenceInfo,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"ips",
+                component: IllegalProcessService,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"vehicle/bind",
+                component: VechileBind,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"illegal/process",
+                component: MonitorProcess,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path: "illegal/read",
+                component: IllegalProcessRead,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"illegal/list",
+                component: IllegalList,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"illegal/illegalInfo",
+                component: IllegalInfo,
+                meta: {
+                    requireAuth: true
+                },
             }
-        ]
+        ],
+        meta: {
+            requireAuth: true
+        },
     },
     {
     path: '/img',
         component: UploadImage
     },
+    {
+        path:'/login',
+        component: Login
+    },
+    {
+        path:'/register',
+        component: Register
+    },
+
 
 ]
 
 const router =new VueRouter({
     routes,
     mode:'history'
+})
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(res => res.meta.requireAuth)) {// 判断是否需要登录权限
+        if (sessionStorage.getItem('username')) {// 判断是否登录
+            next()
+        } else {// 没登录则跳转到登录界面
+            next({
+                path: '/login',
+                // query: {redirect: to.fullPath}
+            })
+        }
+    } else {
+        next()
+    }
 })
 
 export default router

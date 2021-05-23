@@ -70,7 +70,7 @@
       </div>
     </div>
     <div id="first" style="overflow: hidden;width:80%">
-      <div class="layui-carousel" id="test1" style="float: left;width: 30%">
+<!--      <div class="layui-carousel" id="test1" style="float: left;width: 30%">
         <div carousel-item >
           <div><a href="test.html"><img src="@/assets/img/权威.jpg"></a></div>
           <div><a href="test.html"><img src="@/assets/img/权威.jpg"></a></div>
@@ -78,7 +78,34 @@
           <div><a href="test.html"><img src="@/assets/img/覆车之戒.png"></a></div>
           <div><a href="test.html"><img src="@/assets/img/权威解读.png"></a></div>
         </div>
+      </div>-->
+      <div class="block" style="float: left;width: 30%;padding: 5px 5px">
+        <el-carousel height="290px">
+<!--          <el-carousel-item v-for="item in newsImgList" :key="item">
+&lt;!&ndash;            <h3 class="small">
+              {{ item }}
+            </h3>&ndash;&gt;
+            <a href="test.html"><img v-bind:src="item"></a>
+          </el-carousel-item>-->
+          <el-carousel-item>
+            <a href="test.html"><img src="@/assets/img/权威.jpg"></a>
+          </el-carousel-item>
+          <el-carousel-item>
+            <a href="test.html"><img src="@/assets/img/权威.jpg"></a>
+          </el-carousel-item>
+          <el-carousel-item>
+            <div><a href="test.html"><img src="@/assets/img/交警.jpg"></a></div>
+          </el-carousel-item>
+          <el-carousel-item>
+            <div><a href="test.html"><img src="@/assets/img/覆车之戒.png"></a></div>
+          </el-carousel-item>
+          <el-carousel-item>
+            <div><a href="test.html"><img src="@/assets/img/权威解读.png"></a></div>
+          </el-carousel-item>
+
+        </el-carousel>
       </div>
+
       <div class="news" style="float:left;margin: 20px;width: 30%">
         <h2>交管动态</h2>
         <ul>
@@ -154,7 +181,12 @@ layui.use('carousel', function(){
 });
 
 export default {
-  name: "news"
+  name: "news",
+  data(){
+    return {
+      newsImgList:['@/assets/img/权威.jpg','@/assets/img/权威2.jpg','@/assets/img/交警.jpg','@/assets/img/覆车之戒.png','@/assets/img/权威解读.png']
+    }
+  }
 }
 </script>
 
@@ -194,5 +226,21 @@ news {
 .news a:hover{
   text-decoration: underline;
   color: red;
+}
+
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
 }
 </style>

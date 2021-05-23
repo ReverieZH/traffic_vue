@@ -11,7 +11,7 @@
       </el-steps>
       <div style="padding-top:20px;margin: 0 auto;width:800px">
         <h1 >您已成功办理机动车检验预约业务,请记录以下信息</h1>
-        <table  cellspacing="1" cellpadding="1">
+        <table  cellspacing="1" cellpadding="1" class="table_border">
           <tr style="padding: 5px 5px">
             <td class="title">申请人</td>
             <td class="text">{{this.$store.getters.getName}}</td>
@@ -64,7 +64,7 @@ h1{
 h2{
   font-size: 15px;
 }
-table
+.table_border
 {
   border-collapse: collapse;
   margin: 0 auto;
@@ -73,10 +73,10 @@ table
   font-size: 15px;
   height: 300px;
 }
-table tr{
+.table_border tr{
   border: 1px solid #DCDCDC;
 }
-table td{
+.table_border td{
   border: 1px solid #DCDCDC;
 }
 .title{

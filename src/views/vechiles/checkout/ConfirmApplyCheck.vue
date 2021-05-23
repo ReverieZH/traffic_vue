@@ -10,7 +10,7 @@
         <el-step title="完成预约" ></el-step>
       </el-steps>
       <div  style="left: 50%;right: 50%;width: 800px;margin:0 auto;padding-top: 20px">
-        <table  cellspacing="1" cellpadding="1">
+        <table  cellspacing="1" cellpadding="1"  class="table_border">
           <tr style="padding: 5px 5px">
             <td class="title">所有人</td>
             <td class="text">{{this.$store.getters.getApplyCheckform.owner}}</td>
@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style scoped>
-table
+.table_border
 {
   border-collapse: collapse;
   margin: 0 auto;
@@ -97,10 +97,10 @@ table
   font-size: 15px;
   height: 300px;
 }
-table tr{
+.table_border tr{
   border: 1px solid #DCDCDC;
 }
-table td{
+.table_border td{
   border: 1px solid #DCDCDC;
 }
 .title{

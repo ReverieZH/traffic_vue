@@ -8,17 +8,17 @@
       <div class="div">
         <ul>
           <li>
-            <a href="carSearch.html" target="framName">  <div class="img"><img src="@/assets/img/xuanhao.png"></div>
+            <a @click="choosePlateNumberclick()" target="framName">  <div class="img"><img src="@/assets/img/xuanhao.png"></div>
               <p>新车选号</p>
             </a>
           </li>
           <li>
-            <a href="phCheck.html" target="framName">  <div class="img"><img src="@/assets/img/jianyanyuyue.png"></div>
+            <a @click="applyCheckClick"  target="framName">  <div class="img"><img src="@/assets/img/jianyanyuyue.png"></div>
               <p>机动车检验预约</p>
             </a>
           </li>
           <li>
-            <a href="phCheckPic.html" target="framName">
+            <a @click="ExemptCheckClick" target="framName">
               <div class="img"><img src="@/assets/img/shenlingmianjian.png"></div>
               <p>免检标志申领</p>
             </a>
@@ -43,47 +43,17 @@
         <ul>
 
           <li>
-            <a href="noCar.html" target="framName">
+            <a   target="framName">
               <div class="img"><img src="@/assets/img/jiashizhengzhuce.png"></div>
               <p>机动车驾驶证注册</p>
             </a>
           </li>
           <li>
-            <a href="noCarCheck.html" target="framName">
+            <a   target="framName">
               <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
               <p>驾驶证挂失补领</p>
             </a>
           </li>
-          <!--<li>
-              <a href="firstInterCar.html" target="framName">
-              <div class="img"><img src="img/333_05.png"></div>
-              <p>首次入城分析</p>
-                  </a>
-          </li>
-          <li>
-              <a href="frequently.html" target="framName">
-              <div class="img"><img src="img/333_07.png"></div>
-              <p>频繁过车分析</p>
-                  </a>
-          </li>
-          <li>
-              <a href="nightCar.html" target="framName">
-              <div class="img"><img src="img/333_03.png"></div>
-              <p>频繁夜行车分析</p>
-                  </a>
-          </li>
-          <li>
-              <a href="nightDay.html" target="framName">
-              <div class="img"><img src="img/333_05.png"></div>
-              <p>昼伏夜出车分析</p>
-                  </a>
-          </li>
-          <li>
-              <a href="peerCar.html" target="framName">
-              <div class="img"><img src="img/22_03.png"></div>
-              <p>同行车分析</p>
-                  </a>
-          </li>-->
           <div class="clear"></div>
         </ul>
       </div>
@@ -97,7 +67,7 @@
       <div class="div">
         <ul>
           <li>
-            <a href="application.html" target="framName">
+            <a @click="MonitorProcessClick" target="framName">
               <div class="img"><img src="@/assets/img/weifachuli.png"></div>
               <p>违法处理</p>
             </a>
@@ -131,7 +101,30 @@
 
 <script>
 export default {
-  name: "trafficService"
+  name: "trafficService",
+  methods:{
+    choosePlateNumberclick(){
+      this.$router.push("/loginHome/userApply")
+    },
+    applyCheckClick(){
+      this.$router.replace("/loginHome/applyCheck/read")
+    },
+    applyedclick(url){
+      this.$router.replace(url)
+    },
+    userCheckClick(){
+      this.$router.replace("/loginHome/applyCheck/userCheck")
+    },
+    ExemptCheckClick(){
+      this.$router.replace("/loginHome/exemptCheck/read")
+    },
+    UserExemptCheckClick(){
+      this.$router.replace("/loginHome/exemptCheck/userApply")
+    },
+    MonitorProcessClick(){
+      this.$router.replace("/loginHome/illegal/process")
+    }
+  }
 }
 </script>
 

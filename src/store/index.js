@@ -116,13 +116,31 @@ const exemptCheck={
   }
 }
 
+const illegalProcess={
+  state:{
+      plateNumber:''
+  },
+  mutations:{
+    updatePlateNumber(state,payload){
+      state.plateNumber=payload
+    },
+  },
+  getters:{
+    getIllegalProcessPlateNumber(state){
+      return state.plateNumber
+    },
+
+  }
+}
+
 //2.创建对象
 const store=new Vuex.Store({
   state:{
        province:'陕西省',
        city:'西安市',
        username:'reverie',
-       name:'任泽华'
+       name:'任泽华',
+
   },
   //不要在mutcation中进行异步操作
   mutations:{
@@ -157,12 +175,16 @@ const store=new Vuex.Store({
     },
     getName(state){
       return state.name
+    },
+    getIsLogin(state){
+      return state.isLogin
     }
   },
   modules:{
       plateApply:plateApply,
       checkout:checkout,
-      exemptCheck:exemptCheck
+      exemptCheck:exemptCheck,
+      illegalProcess:illegalProcess
   }
 
 })

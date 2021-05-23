@@ -8,7 +8,7 @@
     </el-steps>
     <div  style="left: 50%;right: 50%;width: 800px;margin:0 auto;padding-top: 20px">
       <el-form :model="form">
-      <table  cellspacing="1" cellpadding="1">
+      <table  cellspacing="1" cellpadding="1"  class="table_border">
         <tr>
           <td class="title">号牌号码</td>
           <td class="text" >{{this.$store.getters.getPlateNumber}}</td>
@@ -230,7 +230,7 @@ export default {
   display: none;
 }
 
-table
+.table_border
 {
   border-collapse: collapse;
   margin: 0 auto;
@@ -239,10 +239,10 @@ table
   font-size: 15px;
   height: 300px;
 }
-table tr{
+.table_border tr{
   border: 1px solid #DCDCDC;
 }
-table td{
+.table_border td{
   border: 1px solid #DCDCDC;
 }
 .title{
