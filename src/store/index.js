@@ -129,9 +129,27 @@ const illegalProcess={
     getIllegalProcessPlateNumber(state){
       return state.plateNumber
     },
-
   }
 }
+
+const loserReplace={
+  state:{
+    loserReplace:{
+      dlNumber:''
+    }
+  },
+  mutations:{
+    updateDlNumber(state,payload){
+      state.loserReplace.dlNumber=payload
+    },
+  },
+  getters:{
+    getDlNumber(state){
+      return state.loserReplace.dlNumber
+    },
+  }
+}
+
 
 //2.创建对象
 const store=new Vuex.Store({
@@ -140,7 +158,6 @@ const store=new Vuex.Store({
        city:'西安市',
        username:'reverie',
        name:'任泽华',
-
   },
   //不要在mutcation中进行异步操作
   mutations:{
@@ -184,7 +201,8 @@ const store=new Vuex.Store({
       plateApply:plateApply,
       checkout:checkout,
       exemptCheck:exemptCheck,
-      illegalProcess:illegalProcess
+      illegalProcess:illegalProcess,
+      loserReplace:loserReplace
   }
 
 })

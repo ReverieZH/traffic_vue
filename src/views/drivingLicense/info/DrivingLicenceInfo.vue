@@ -62,7 +62,7 @@ export default {
       url:'/drivingLicence/info',
       method:'post',
       params:{
-        username:this.$store.getters.getUsername
+        username:sessionStorage.getItem("username")
       }
     }).then(res=>{
       if(res.issuccess){

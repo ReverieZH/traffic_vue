@@ -38,6 +38,11 @@ import Login from "@/views/login/Login";
 import Test from "@/Test";
 import HomeTrafficService from "@/views/HomeTrafficService";
 import Register from "@/views/login/Register";
+import ChangeRead from "@/views/drivingLicense/change/ChangeRead";
+import UserDeclare from "@/views/drivingLicense/change/UserDeclare";
+import ConfirmInfo from "@/views/drivingLicense/change/ConfirmInfo";
+import ChangeChoosePost from "@/views/drivingLicense/change/ChangeChoosePost";
+import ViewChangeApply from "@/views/drivingLicense/change/ViewChangeApply";
 /*
 
 const Home =() => import('../views/home/Home')
@@ -267,7 +272,42 @@ const routes=[
                 meta: {
                     requireAuth: true
                 },
-            }
+            },
+            {
+               path:"change/read",
+                component: ChangeRead,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"change/declare",
+                component: UserDeclare,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"change/confirm",
+                component: ConfirmInfo,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"change/post",
+                component: ChangeChoosePost,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path:"change/viewChange",
+                component: ViewChangeApply,
+                meta: {
+                    requireAuth: true
+                },
+            },
         ],
         meta: {
             requireAuth: true

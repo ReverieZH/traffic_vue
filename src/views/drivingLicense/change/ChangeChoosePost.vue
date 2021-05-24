@@ -1,19 +1,16 @@
 <template>
 <div>
-  <el-steps :active="2"   finish-status="success" simple style="margin-top: 20px">
+  <el-page-header @back="goBack" content="驾驶证业务/遗失补证">
+  </el-page-header>
+  <el-steps :active="3"   finish-status="success" simple style="margin-top: 20px">
     <el-step title="业务须知" ></el-step>
-    <el-step title="填写申请信息" ></el-step>
-    <el-step title="选择获取方式" ></el-step>
-    <el-step title="确认提交" ></el-step>
+    <el-step title="用户申告" ></el-step>
+    <el-step title="确认信息" ></el-step>
+    <el-step title="资料填写" ></el-step>
+    <el-step title="完成提交" ></el-step>
   </el-steps>
   <div  style="left: 50%;right: 50%;width: 800px;margin:0 auto;padding-top: 20px">
     <table  cellspacing="1" cellpadding="1">
-      <tr style="padding: 5px 5px">
-        <td class="title">纸质凭证</td>
-        <td class="text">
-          <el-radio v-model="post.isNeedPaper" label="0">不需要</el-radio>
-          <el-radio v-model="isNeedPaper" label="1">需要</el-radio></td>
-      </tr>
       <tr>
         <td class="title">获取方式</td>
         <td class="text">
@@ -40,6 +37,14 @@
         <td class="text">
           <div v-if="method">
             <el-input v-model="post.address"  style="width: 200px"  ></el-input>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">联系人姓名</td>
+        <td class="text">
+          <div v-if="method">
+            <el-input v-model="post.receiverName"  style="width: 200px" ></el-input>
           </div>
         </td>
       </tr>
@@ -93,16 +98,20 @@ export default {
       post:{
         isNeedPaper:'',
         accessMethod:'',
+        phoneNumber:'',
         address:'',
         postCode:'',
         area:'',
-        phoneNumber:'',
+        receiverName:'',
       },
       options: regionData,
       selectedOptions: []
     }
   },
   methods:{
+    back(){
+      this.$router.go(-1)
+    },
     handleClose(done) {
       this.$confirm('确认关闭？')
           .then(_ => {
@@ -120,34 +129,30 @@ export default {
     changeMethod(){
       if(this.post.accessMethod==0){
         this.isDisable=true
-      }else if(this.post.getMeaccessMethodthod==1){
+      }else if(this.post.accessMethod==1){
         this.isDisable=false
       }
     },
     submit(){
         request({
-            url:'/exemptedCheck/exemptCheckApply',
+            url:'/change/lose',
             method:'post',
             params:{
-              plateNumber:this.$store.getters.getPlateNumber,
-              insurancePhoto:this.$store.getters.getExemptFormData.insurancePhotoUrl,
-              taxPhoto:this.$store.getters.getExemptFormData.taxPhotoUrl,
-              endTime:this.$store.getters.getExemptFormData.endTime,
-              isNeedPaper:this.post.isNeedPaper,
+              dlNumber:this.$store.getters.getDlNumber,
               accessMethod:this.post.accessMethod,
               address:this.post.address,
               postCode:this.post.postCode,
               area:this.post.area,
               phoneNumber:this.post.phoneNumber,
-              receiverName:this.$store.getters.getName,
+              receiverName:this.post.receiverName,
               username:sessionStorage.getItem("username")
             }
         }).then(res=>{
             if(res.issuccess){
               this.$router.push({
-                path:'viewInfo',
+                path:'viewChange',
                 query: {
-                  acNumber: res.acNumber,
+                  loseReplaceNumber: res.loseReplaceNumber,
                 }
               })
             }else{

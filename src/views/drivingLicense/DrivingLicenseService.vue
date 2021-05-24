@@ -60,7 +60,7 @@
             </a>
           </li>
           <li>
-            <a href="noCarCheck.html" target="framName">
+            <a @click="changeDrivingLicence" target="framName">
               <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
               <p>遗失补证</p>
             </a>
@@ -125,6 +125,9 @@ export default {
   methods:{
     bindDrivingLicence(){
       this.$router.replace("drivingLicence/bind")
+    },
+    changeDrivingLicence(){
+      this.$router.replace("change/read")
     }
   }
 }
