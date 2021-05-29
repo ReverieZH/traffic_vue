@@ -1,6 +1,10 @@
 <template>
   <div>
-  <flow-head step=1></flow-head>
+    <el-steps :active="1"   finish-status="success" simple style="margin-top: 20px">
+      <el-step title="基本信息" ></el-step>
+      <el-step title="确认信息" ></el-step>
+      <el-step title="选号" ></el-step>
+    </el-steps>
   <div class="notice_main" style="padding-top: 50px">
     <div style="border-bottom: 1px #ccc solid;padding-bottom: 8px">
       <p style="line-height: 24px;font-size: 14px;padding: 4px 0 0 36px ;color:#bb8940;background-image: url(static/img/ts_03.png);background-repeat: no-repeat;background-position: 10px 8px;font-weight: bold">温馨提示</p>
@@ -48,7 +52,7 @@
           </td>
         </tr>
         <tr>
-          <td width="40%" height="50" align="right" style="text-align: right;padding-right: 5px">品牌型号:<span style="color: red;">*</span></td>
+          <td width="40%" height="50" align="right" style="text-align: right;padding-right: 5px">VIN:<span style="color: red;">*</span></td>
           <td width="75%" height="50" align="left" style="text-align: left;padding-left: 5px">
             <el-input v-model="vin" placeholder="请输入车辆识别代号" style="width: 300px"></el-input>
           </td>
@@ -168,7 +172,12 @@ export default {
         console.log("applyNumber:",res.applyNumber)
         if(res.issuccess){
           this.$store.commit('updateApplyNumber',res.applyNumber)
-          this.$router.push('applyStatus')
+          this.$router.replace({
+            path:'applyStatus',
+            query:{
+              applyNumber:res.applyNumber
+            }
+          })
         }else{
           this.dialogVisible = true
         }

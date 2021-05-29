@@ -68,7 +68,9 @@ export default {
         params:{
           plateNumberHead:row.plateHead,
           platenumber:row.plateNumber,
-          username:this.$store.getters.getUsername
+          locationName:row.locationName,
+          username:this.$store.getters.getUsername,
+          applyNumber:this.$route.query.applyNumber
         }
       }).then(res=>{
           if(res){

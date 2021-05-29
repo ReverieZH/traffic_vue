@@ -12,16 +12,16 @@
       <div  style="left: 50%;right: 50%;width: 800px;margin:0 auto;padding-top: 20px">
         <table  cellspacing="1" cellpadding="1"  class="table_border">
           <tr style="padding: 5px 5px">
-            <td class="title">所有人</td>
-            <td class="text">{{this.$store.getters.getApplyCheckform.owner}}</td>
+            <td class="title" >所有人</td>
+            <td class="text" v-model="owner">{{this.$store.getters.getApplyCheckform.owner}}</td>
             <td class="title">机动车登记证书编号</td>
-            <td class="text">11111</td>
+            <td class="text" v-model="certificateNumber">110000600743</td>
           </tr>
           <tr>
             <td class="title">号牌号码</td>
-            <td class="text">{{this.$store.getters.getApplyCheckform.plateNumber}}</td>
+            <td class="text" v-model="plateNumber">{{this.$store.getters.getApplyCheckform.plateNumber}}</td>
             <td class="title">车辆类型</td>
-            <td class="text">{{this.$store.getters.getApplyCheckform.carType}}</td>
+            <td class="text" v-model="carType">{{this.$store.getters.getApplyCheckform.carType}}</td>
           </tr>
           <tr>
             <td class="title">预约时间</td>
@@ -57,6 +57,14 @@ import {request} from "@/network/request";
 
 export default {
   name: "ConfirmApplyCheck",
+  data(){
+    return {
+       owner:'',
+       certificateNumber:'',
+       plateNumber:'',
+       carType:''
+    }
+  },
   methods:{
     confirm(){
         request({
@@ -76,8 +84,14 @@ export default {
             }
         }).then(res=>{
             if(res.issuccess){
-                this.$store.commit('updateReserveNumber',res.reserveNumber)
-                this.$router.push('complete')
+                // this.$store.commit('updateReserveNumber',res.reserveNumber)
+              console.log(res.reserveNumber);
+              this.$router.replace({
+                  path:'complete',
+                  query:{
+                    reserveNumber:res.reserveNumber
+                  }
+                })
             }
         }).catch(err=>{
 

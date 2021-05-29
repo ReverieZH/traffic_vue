@@ -100,5 +100,29 @@ export default {
 </script>
 
 <style scoped>
-
+.table_border
+{
+  border-collapse: collapse;
+  margin: 0 auto;
+  text-align: center;
+  /*border-color:#DCDCDC ;*/
+  font-size: 15px;
+  height: 300px;
+}
+.table_border tr{
+  border: 1px solid #DCDCDC;
+}
+.table_border td{
+  border: 1px solid #DCDCDC;
+}
+.title{
+  background: #F5F5F5;
+  font-size: 15px;
+  font-weight: bold;
+  width: 800px;
+  color: #3F3F3F;
+}
+.text{
+  width: 600px;
+}
 </style>

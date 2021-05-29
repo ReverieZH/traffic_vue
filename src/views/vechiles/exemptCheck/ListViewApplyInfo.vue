@@ -1,12 +1,9 @@
 <template>
   <div>
-    <el-steps :active="3"   finish-status="success" simple style="margin-top: 20px">
-      <el-step title="业务须知" ></el-step>
-      <el-step title="填写申请信息" ></el-step>
-      <el-step title="选择获取方式" ></el-step>
-      <el-step title="确认提交" ></el-step>
-    </el-steps>
     <div  style="left: 50%;right: 50%;width: 800px;margin:0 auto;padding-top: 20px">
+      <div style="text-align: center;padding: 5px 5px;font-weight: bold">
+        <h2>免检车申领检验标志申请信息查看</h2>
+      </div>
       <table  cellspacing="1" cellpadding="1"  class="table_border">
         <tr style="padding: 5px 5px">
           <td class="title">车牌号</td>
@@ -26,10 +23,10 @@
           <td class="title">车船税凭证照片</td>
           <td class="text">
             <el-image
-              style="width: 100px; height: 100px"
-              :src="applyExemptedCheck.taxPhoto"
-              :preview-src-list="taxPhotoList">
-          </el-image></td>
+                style="width: 100px; height: 100px"
+                :src="applyExemptedCheck.taxPhoto"
+                :preview-src-list="taxPhotoList">
+            </el-image></td>
         </tr>
         <tr>
           <td class="title">是否需要纸质凭证</td>
@@ -59,7 +56,7 @@
         </tr>
       </table>
       <div style="padding-top: 20px;text-align: right">
-          <el-button type="primary"  @click="complete">完成</el-button>
+        <el-button type="primary" @click="back">返回</el-button>
       </div>
     </div>
   </div>
@@ -70,7 +67,7 @@ import {request} from "@/network/request";
 import moment from "moment";
 
 export default {
-  name: "ViewApplyInfo",
+  name: "ListViewApplyInfo",
   data(){
     return {
       applyExemptedCheck:{},
@@ -79,8 +76,8 @@ export default {
     }
   },
   methods:{
-    complete(){
-        this.$router.replace("userApply")
+    back(){
+      this.$router.go(-1)
     },
     showDate(date){
       return moment(date).format("YYYY-MM-DD");
@@ -88,17 +85,17 @@ export default {
   },
   created() {
     request({
-        url:'/exemptedCheck/info',
-        method:'post',
-        params:{
-          acNumber:this.$route.query.acNumber
-        }
+      url:'/exemptedCheck/info',
+      method:'post',
+      params:{
+        acNumber:this.$route.query.acNumber
+      }
     }).then(res=>{
-        if(res.issuccess){
-          this.applyExemptedCheck=res.applyExemptedCheck
-          this.insurancePhotoList.push(res.applyExemptedCheck.insurancePhoto)
-          this.taxPhotoList.push(res.applyExemptedCheck.taxPhoto)
-        }
+      if(res.issuccess){
+        this.applyExemptedCheck=res.applyExemptedCheck
+        this.insurancePhotoList.push(res.applyExemptedCheck.insurancePhoto)
+        this.taxPhotoList.push(res.applyExemptedCheck.taxPhoto)
+      }
     }).catch(err=>{
 
     })

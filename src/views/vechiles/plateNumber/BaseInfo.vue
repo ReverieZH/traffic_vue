@@ -1,6 +1,10 @@
 <template>
 <div>
-  <flow-head step=0></flow-head>
+  <el-steps :active="0"   finish-status="success" simple style="margin-top: 20px">
+    <el-step title="基本信息" ></el-step>
+    <el-step title="确认信息" ></el-step>
+    <el-step title="选号" ></el-step>
+  </el-steps>
   <div style="padding-top: 50px">
   <h2>温馨提示</h2>
   <p>此功能旨在方便用户熟悉新车注册登记预选号牌业务操作流程，不校验基础信息的准确性，不保存任何信息，不发送短信验证码，所选号牌号码均无效</p>

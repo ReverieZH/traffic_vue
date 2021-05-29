@@ -1,4 +1,16 @@
 <template>
+  <div>
+  <div>
+    <el-steps :active="3"   finish-status="success" simple style="margin-top: 20px">
+      <el-step title="业务须知" ></el-step>
+      <el-step title="基本信息" ></el-step>
+      <el-step title="选择时间" ></el-step>
+      <el-step title="选择检测站" ></el-step>
+      <el-step title="选择时段" ></el-step>
+      <el-step title="确认预约信息" ></el-step>
+      <el-step title="完成预约" ></el-step>
+    </el-steps>
+  </div>
   <div style="width: 800px;margin:0 auto">
     <el-table :data="tableData" style="width: 100%">
       <el-table-column label="" width="40">
@@ -16,6 +28,8 @@
       <el-button type="primary" @click="next()">下一步</el-button>
     </div>
   </div>
+  </div>
+
 </template>
 
 <script>

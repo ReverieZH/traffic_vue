@@ -109,58 +109,58 @@
       <div class="news" style="float:left;margin: 20px;width: 30%">
         <h2>交管动态</h2>
         <ul>
-          <li><a href="#">2020年实现所有人民脱贫</a></li>
-          <li><a href="#">中国高考生人数逐年递减说明了什么</a></li>
-          <li><a href="#">IT专业就业率第一</a></li>
-          <li><a href="#">前程工作师前景如何</a></li>
-          <li><a href="#">科技改变生活，10个新科技展示</a></li>
-          <li><a href="#">学会管理时间</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jgdt/2021-05-28/20210528003120.html" title="陕西省公安厅交警总队曝光10家 重点交通违法高发危险品运输企业" target="_blank">陕西省公安厅交警总队曝光10家 重</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jgdt/2021-05-28/20210528003122.html" title="权威发布 | 中国与塞尔维亚签署驾驶证互认换领协议" target="_blank">权威发布 | 中国与塞尔维亚签署驾</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jgdt/2021-05-26/20210526003117.html" title="最新！西安市道路交通事故专业救治医院名单发布！" target="_blank">最新！西安市道路交通事故专业救治</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jgdt/2021-05-25/20210525003113.html" title="咸阳交警用心用情用智办好为民实事" target="_blank">咸阳交警用心用情用智办好为民实事</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jgdt/2021-05-24/20210524003109.html" title="权威发布 | 近日农村地区接连发生群死群伤交通事故 超员载客违法载人肇事突出 临水临崖弯坡路段风险高" target="_blank">权威发布 | 近日农村地区接连发生</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jgdt/2021-05-21/20210521003108.html">陕西两地交警护送发烧抽搐婴儿分秒必争 就医一周后婴儿苏醒</a></li>
         </ul>
       </div>
       <div class="news" style="float: left;margin: 20px;width: 30%">
         <h2>安全宣传</h2>
         <ul>
-          <li><a href="#">2020年实现所有人民脱贫</a></li>
-          <li><a href="#">中国高考生人数逐年递减说明了什么</a></li>
-          <li><a href="#">IT专业就业率第一</a></li>
-          <li><a href="#">前程工作师前景如何</a></li>
-          <li><a href="#">科技改变生活，10个新科技展示</a></li>
-          <li><a href="#">学会管理时间</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jsjy/2021-05-28/20210528003123.html" title="向右转小弯 向左转大弯" target="_blank">向右转小弯 向左转大弯</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jsjy/2021-05-26/20210526003118.html" title="车速快 关车窗" target="_blank">车速快 关车窗</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jsjy/2021-05-25/20210525003116.html" title="西安交警手绘“游戏棋”，整治不带头盔现象！" target="_blank">西安交警手绘“游戏棋”，整治不带</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jsjy/2021-05-25/20210525003114.html" title="不要见缝就钻" target="_blank">不要见缝就钻</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jsjy/2021-05-24/20210524003111.html" title="给自己留些空间" target="_blank">给自己留些空间</a></li>
+          <li><a href="https://sn.122.gov.cn/#/jsjy/2021-05-21/20210521003107.html" title="意识决定成败">意识决定成败</a>></li>
         </ul>
       </div>
     </div>
     <div id="second" style="overflow: hidden;width:80%">
       <div class="news" style="float:left;margin: 15px;width: 30% ">
-        <h2>xxx1</h2>
+        <h2>业务热点</h2>
         <ul>
-          <li><a href="#">2020年实现所有人民脱贫</a></li>
-          <li><a href="#">中国高考生人数逐年递减说明了什么</a></li>
-          <li><a href="#">IT专业就业率第一</a></li>
-          <li><a href="#">前程工作师前景如何</a></li>
-          <li><a href="#">科技改变生活，10个新科技展示</a></li>
-          <li><a href="#">学会管理时间</a></li>
+          <li><a href="https://sn.122.gov.cn/#/examplanpub" title="驾驶人考试预约计划公布" target="_blank">驾驶人考试预约计划公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/examappointpub" title="驾驶人考试预约结果公布" target="_blank">驾驶人考试预约结果公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/vehxhhdpub" title="互联网预选号牌号池公布" target="_blank">互联网预选号牌号池公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/examydplanpub" title="驾驶人异地考试预约计划公布" target="_blank">驾驶人异地考试预约计划公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/examydappointpub" title="驾驶人异地考试预约结果公布" target="_blank">驾驶人异地考试预约结果公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/map-monitor" title="交通技术监控设备公布" target="_blank"><span class="dots">·</span>交通技术监控设备公布</a></li>
         </ul>
       </div>
       <div class="news" style="float:left;margin: 15px;width: 30%">
-        <h2>xxx2</h2>
+        <h2>信息公告</h2>
         <ul>
-          <li><a href="#">2020年实现所有人民脱贫</a></li>
-          <li><a href="#">中国高考生人数逐年递减说明了什么</a></li>
-          <li><a href="#">IT专业就业率第一</a></li>
-          <li><a href="#">前程工作师前景如何</a></li>
-          <li><a href="#">科技改变生活，10个新科技展示</a></li>
-          <li><a href="#">学会管理时间</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=null&amp;tjyf=202104&amp;fwdmgl=1004" title="机动车强制报废公告" target="_blank">机动车强制报废公告</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=null&amp;tjyf=202104&amp;fwdmgl=2006" title="驾驶证逾期未审验公告" target="_blank">驾驶证逾期未审验公告</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=null&amp;tjyf=202104&amp;fwdmgl=2009" title="驾驶证逾期未换证公告" target="_blank">驾驶证逾期未换证公告</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=null&amp;tjyf=202104&amp;fwdmgl=2058" title="机动车驾驶证旧证未收回作废公告" target="_blank">机动车驾驶证旧证未收回作废公告</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=null&amp;tjyf=202104&amp;fwdmgl=1028" title="机动车号牌未收回作废公告" target="_blank">机动车号牌未收回作废公告</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=null&amp;tjyf=202104&amp;fwdmgl=2002" target="_blank"><span class="dots">·</span>2021年04月逾期提交身体条件证明公告</a></li>
         </ul>
       </div>
       <div class="news" style="float: left;margin: 15px;width: 30%">
-        <h2>xxx3</h2>
+        <h2>信息公布</h2>
         <ul>
-          <li><a href="#">2020年实现所有人民脱贫</a></li>
-          <li><a href="#">中国高考生人数逐年递减说明了什么</a></li>
-          <li><a href="#">IT专业就业率第一</a></li>
-          <li><a href="#">前程工作师前景如何</a></li>
-          <li><a href="#">科技改变生活，10个新科技展示</a></li>
-          <li><a href="#">学会管理时间</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=陕A&amp;tjyf=202104&amp;fwdmgl=6003" title="西安考试人数公布" target="_blank">西安考试人数公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=陕C&amp;tjyf=202104&amp;fwdmgl=3001" title="宝鸡驾校培训质量公布" target="_blank">宝鸡驾校培训质量公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=陕D&amp;tjyf=202104&amp;fwdmgl=6003" title="咸阳考试人数公布" target="_blank">咸阳考试人数公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=陕A&amp;tjyf=202104&amp;fwdmgl=3001" title="西安驾校培训质量公布" target="_blank">西安驾校培训质量公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=陕B&amp;tjyf=202104&amp;fwdmgl=3001" title="铜川驾校培训质量公布" target="_blank">铜川驾校培训质量公布</a></li>
+          <li><a href="https://sn.122.gov.cn/#/noticeDetail?fzjg=陕B&amp;tjyf=202104&amp;fwdmgl=6003" target="_blank"><span class="dots">·</span>2021年04月铜川考试人数公布</a></li>
         </ul>
       </div>
     </div>

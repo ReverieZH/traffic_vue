@@ -84,7 +84,7 @@ const checkout={
 
 const exemptCheck={
   state:{
-     plateNumber:'Y3213',
+     plateNumber:'陕FY3213',
      exemptFormData:{
        plateNumber:'',
        endTime:'',

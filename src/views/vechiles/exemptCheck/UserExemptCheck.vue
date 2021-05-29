@@ -78,7 +78,7 @@ export default {
   methods:{
     handleClick(row){
       this.$router.push({
-        path:'viewInfo',
+        path:'listview',
         query: {
           acNumber: row.acNumber,
         }

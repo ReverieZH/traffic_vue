@@ -1,7 +1,10 @@
 <template>
   <div>
-    <flow-head step="2"></flow-head>
-
+    <el-steps :active="2"   finish-status="success" simple style="margin-top: 20px">
+      <el-step title="基本信息" ></el-step>
+      <el-step title="确认信息" ></el-step>
+      <el-step title="选号" ></el-step>
+    </el-steps>
      <div v-if="status==0" class="if_div">
        <div>
          <div class="staus">
@@ -125,7 +128,12 @@ export default {
     chooseNumber(){
       console.log('status:',this.status)
       if(this.status==1||this.status=='1'){
-        this.$router.replace('cpn')
+        this.$router.replace({
+          path:'cpn',
+          query:{
+            applyNumber:this.$route.query.applyNumber
+          }
+        })
       }else{
         this.dialogVisible = true
       }

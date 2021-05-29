@@ -88,7 +88,7 @@ export default {
       rules: {
         plateNumber: [
           { required: true, message: '请输入车牌号', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+          { min: 3, max: 7, message: '长度在 3 到 7 个字符', trigger: 'blur' }
         ],
         owner: [
           { required: true, message: '请输入所有人姓名', trigger: 'blur' }

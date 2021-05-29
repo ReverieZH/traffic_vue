@@ -8,6 +8,22 @@
              label-width="0px"
              class="demo-ruleForm login-page">
       <h3 class="loginTitle">交通服务平台注册</h3>
+      <el-form-item prop="certificatetype">
+        <el-select v-model="ruleForm.certificatetype" placeholder="请选择证件类型" style="width: 350px">
+          <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value">
+          </el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item prop="certificatenumber">
+        <el-input type="text" v-model="ruleForm.certificatenumber" auto-complete="off" placeholder="请输入证件号码"></el-input>
+      </el-form-item>
+      <el-form-item prop="name">
+        <el-input type="text" v-model="ruleForm.name" auto-complete="off" placeholder="请输入真实姓名"></el-input>
+      </el-form-item>
       <el-form-item prop="username">
         <el-input type="text" v-model="ruleForm.username" auto-complete="off" placeholder="请输入用户名"></el-input>
       </el-form-item>
@@ -62,13 +78,48 @@ export default {
     };
     return {
       logining: false,
+      options: [{
+        value: 'A',
+        label: 'A居民身份证'
+      }, {
+        value: 'C',
+        label: 'C军官证'
+      }, {
+        value: 'D',
+        label: 'D士兵证'
+      }, {
+        value: 'E',
+        label: 'E军官离退休证'
+      }, {
+        value: 'F',
+        label: 'F境外人员身份证明'
+      },{
+        value: 'F',
+        label: 'F境外人员身份证明'
+      },{
+        value: 'G',
+        label: 'G外交人员身份证明'
+      },{
+        value: 'I',
+        label: 'I外国人永久人员身份证明'
+      },{
+        value: 'Q',
+        label: 'Q港澳台居民居住证'
+      }
+      ],
       ruleForm: {
+        certificatetype:'',
+        certificatenumber:'',
+        name:'',
         username: '',
         password: '',
         rePassword:'',
         phoneNumber:'',
       },
       rules: {
+        certificatetype:[{required: true, message: '请选择证件类型', trigger: 'blur'}],
+        certificatenumber:[{required: true, message: '请输入证件号码', trigger: 'blur'}],
+        name:[{required: true, message: '请输入真实姓名', trigger: 'blur'}],
         username: [{required: true, message: '请输入用户名', trigger: 'blur'}],
         phoneNumber: [{required: true, message: '请输入手机号', trigger: 'blur'}],
         password: [{required: true, message: '请输入密码'}, {trigger: 'blur',validator: validatePass,},{ min: 6, max: 16, message: '长度在 6 到 16 个字符', trigger: 'blur' },],

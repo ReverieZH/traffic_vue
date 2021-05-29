@@ -74,6 +74,7 @@ export default {
                 message: '处理成功',
                 type: 'success'
               });
+              this.$router.go(-1)
             }else{
               this.$message({
                 message: '处理失败',

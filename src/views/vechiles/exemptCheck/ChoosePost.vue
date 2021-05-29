@@ -12,7 +12,7 @@
         <td class="title">纸质凭证</td>
         <td class="text">
           <el-radio v-model="post.isNeedPaper" label="0">不需要</el-radio>
-          <el-radio v-model="isNeedPaper" label="1">需要</el-radio></td>
+          <el-radio v-model="post.isNeedPaper" label="1">需要</el-radio></td>
       </tr>
       <tr>
         <td class="title">获取方式</td>
@@ -103,6 +103,9 @@ export default {
     }
   },
   methods:{
+    back(){
+      this.$router.go(-1)
+    },
     handleClose(done) {
       this.$confirm('确认关闭？')
           .then(_ => {
@@ -120,7 +123,7 @@ export default {
     changeMethod(){
       if(this.post.accessMethod==0){
         this.isDisable=true
-      }else if(this.post.getMeaccessMethodthod==1){
+      }else if(this.post.accessMethod==1){
         this.isDisable=false
       }
     },

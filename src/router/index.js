@@ -43,6 +43,7 @@ import UserDeclare from "@/views/drivingLicense/change/UserDeclare";
 import ConfirmInfo from "@/views/drivingLicense/change/ConfirmInfo";
 import ChangeChoosePost from "@/views/drivingLicense/change/ChangeChoosePost";
 import ViewChangeApply from "@/views/drivingLicense/change/ViewChangeApply";
+import ListViewApplyInfo from "@/views/vechiles/exemptCheck/ListViewApplyInfo";
 /*
 
 const Home =() => import('../views/home/Home')
@@ -206,6 +207,13 @@ const routes=[
             {
                 path: "exemptCheck/userApply",
                 component: UserExemptCheck,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path: "exemptCheck/listview",
+                component: ListViewApplyInfo,
                 meta: {
                     requireAuth: true
                 },

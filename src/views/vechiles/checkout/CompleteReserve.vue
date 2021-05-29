@@ -34,7 +34,7 @@
           </tr>
           <tr>
             <td class="title">预约码</td>
-            <td class="text">{{this.$store.getters.getReserveNumber}}</td>
+            <td class="text">{{this.$route.query.reserveNumber}}</td>
           </tr>
           <tr>
             <td class="title">系统提示</td>
@@ -51,7 +51,12 @@
 
 <script>
 export default {
-  name: "CompleteReserve"
+  name: "CompleteReserve",
+  data(){
+    return {
+      reserveNumber:this.$route.query.reserveNumber
+    }
+  }
 }
 </script>
 

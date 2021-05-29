@@ -1,6 +1,19 @@
 <template>
+  <div>
+  <div>
+    <el-steps :active="2"   finish-status="success" simple style="margin-top: 20px">
+      <el-step title="业务须知" ></el-step>
+      <el-step title="基本信息" ></el-step>
+      <el-step title="选择时间" ></el-step>
+      <el-step title="选择检测站" ></el-step>
+      <el-step title="选择时段" ></el-step>
+      <el-step title="确认预约信息" ></el-step>
+      <el-step title="完成预约" ></el-step>
+    </el-steps>
+  </div>
   <div style="width: 800px;margin:0 auto">
-    <el-calendar v-model="dateValue">
+
+    <el-calendar v-model="dateValue"  >
       <!-- 这里使用的是 2.5 slot 语法，对于新项目请使用 2.6 slot 语法-->
       <template
           slot="dateCell"
@@ -15,6 +28,7 @@
       <el-button type="primary" @click="next()">下一步</el-button>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -23,7 +37,12 @@ export default {
   name: "ChooseDate",
   data(){
     return {
-      dateValue:new Date()
+      dateValue:new Date(),
+      pickerOptions1: {
+        disabledDate(time) {
+          return time.getTime() < Date.now() - 8.64e7;
+        }
+      }
     }
   },
   methods:{
