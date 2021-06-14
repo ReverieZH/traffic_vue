@@ -36,6 +36,7 @@ const plateApply={
 const checkout={
   state:{
     owner:'',
+    plateNumber:'',
     applyCheckform:{
 
     },
@@ -64,6 +65,9 @@ const checkout={
     updateReserveNumber(state,payload){
       state.applyCheckform.reserveNumber=payload
     },
+    updateCOPlateNumber(state,payload){
+      state.plateNumber=payload
+    }
 
   },
   actions:{
@@ -78,6 +82,9 @@ const checkout={
     },
     getReserveNumber(state){
       return state.applyCheckform.reserveNumber
+    },
+    getCOPlateNumber(state){
+      return state.plateNumber
     }
   }
 }
@@ -104,6 +111,9 @@ const exemptCheck={
     },
     updateTaxPhotoUrl(state, payload) {
       state.exemptFormData.taxPhotoUrl=payload
+    },
+    updateECPlateNumber(state, payload) {
+      state.plateNumber=payload
     }
   },
   getters:{
@@ -167,6 +177,9 @@ const store=new Vuex.Store({
     },
     updateName(state,payload){
       state.name=payload
+    },
+    updateUsername(state,payload){
+      state.username=payload
     }
   },
   actions:{

@@ -78,7 +78,7 @@ export default {
     return {
       dialogVisible:false,
       ruleForm: {
-        plateNumber: '',
+        plateNumber: this.$store.getters.getCOPlateNumber ,
         owner: this.$store.getters.getName,
         carType: '',
         drivingType: '',

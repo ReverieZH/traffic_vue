@@ -8,23 +8,23 @@
       <div class="div">
         <ul>
           <li>
-            <a href="carSearch.html" target="framName">  <div class="img"><img src="@/assets/img/xuanhao.png"></div>
+            <a href="carSearch.html" target="framName">  <div class="img"><img src="@/assets/img/bendikaoshiyuyue.png"></div>
               <p>本地考试预约</p>
             </a>
           </li>
           <li>
-            <a href="phCheck.html" target="framName">  <div class="img"><img src="@/assets/img/jianyanyuyue.png"></div>
+            <a href="phCheck.html" target="framName">  <div class="img"><img src="@/assets/img/quxiao_bendikaoshiyuyue.png"></div>
               <p>取消本地考试预约</p>
             </a>
           </li>
           <li>
             <a href="phCheckPic.html" target="framName">
-              <div class="img"><img src="@/assets/img/shenlingmianjian.png"></div>
+              <div class="img"><img src="@/assets/img/yidikaoshiyuyue.png"></div>
               <p>异地考试预约</p>
             </a>
           </li>
           <li>
-            <a href="phCheck.html" target="framName">  <div class="img"><img src="@/assets/img/jianyanyuyue.png"></div>
+            <a href="phCheck.html" target="framName">  <div class="img"><img src="@/assets/img/quexiao_yidikaoshiyuyue.png"></div>
               <p>取消异地考试预约</p>
             </a>
           </li>
@@ -40,8 +40,7 @@
 
       <div class="div">
         <ul>
-
-          <li>
+<!--          <li>
             <a href="noCar.html" target="framName">
               <div class="img"><img src="@/assets/img/jiashizhengzhuce.png"></div>
               <p>期满换证</p>
@@ -58,7 +57,7 @@
               <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
               <p>损毁换证</p>
             </a>
-          </li>
+          </li>-->
           <li>
             <a @click="changeDrivingLicence" target="framName">
               <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
@@ -78,19 +77,19 @@
         <ul>
           <li>
             <a href="application.html" target="framName">
-              <div class="img"><img src="@/assets/img/weifachuli.png"></div>
+              <div class="img"><img src="@/assets/img/yanqihuanzheng.png"></div>
               <p>延期换证</p>
             </a>
           </li>
           <li>
             <a href="auditing.html" target="framName">
-              <div class="img"><img src="@/assets/img/fuakuanjiana.png"></div>
+              <div class="img"><img src="@/assets/img/yanqishengyan.png"></div>
               <p>延期审验</p>
             </a>
           </li>
           <li>
             <a href="auditing.html" target="framName">
-              <div class="img"><img src="@/assets/img/fuakuanjiana.png"></div>
+              <div class="img"><img src="@/assets/img/yanqishengtizhengming.png"></div>
               <p>延期提交身体条件证明</p>
             </a>
           </li>

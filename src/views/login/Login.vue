@@ -67,6 +67,7 @@ export default {
             if(res.issuccess){
               this.logining = false;
               this.logining = false;
+              this.$store.commit("updateUsername",this.ruleForm2.username);
               sessionStorage.setItem('username', this.ruleForm2.username);
               sessionStorage.setItem('isLogin', '1');
               this.$router.push({path: '/loginHome'});

@@ -44,6 +44,8 @@ import ConfirmInfo from "@/views/drivingLicense/change/ConfirmInfo";
 import ChangeChoosePost from "@/views/drivingLicense/change/ChangeChoosePost";
 import ViewChangeApply from "@/views/drivingLicense/change/ViewChangeApply";
 import ListViewApplyInfo from "@/views/vechiles/exemptCheck/ListViewApplyInfo";
+import ChooseCar from "@/views/vechiles/exemptCheck/ChooseCar";
+import CheckOut_ChooseCar from "@/views/vechiles/checkout/CheckOut_ChooseCar";
 /*
 
 const Home =() => import('../views/home/Home')
@@ -129,6 +131,13 @@ const routes=[
                 },
             },
             {
+                path: 'applyCheck/chooseCar',
+                component: CheckOut_ChooseCar,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
                 path: 'applyCheck/read',
                 component: CheckOutRead,
                 meta: {
@@ -186,6 +195,13 @@ const routes=[
             {
                 path: 'exemptCheck/read',
                 component: ExemptRead,
+                meta: {
+                    requireAuth: true
+                },
+            },
+            {
+                path: "exemptCheck/chooseCar",
+                component: ChooseCar,
                 meta: {
                     requireAuth: true
                 },

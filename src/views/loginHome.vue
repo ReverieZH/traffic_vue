@@ -4,7 +4,7 @@
   <el-header><login-header></login-header></el-header>
   <el-container>
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-      <el-menu :default-openeds="['1', '2']">
+      <el-menu :default-openeds="['1', '3']">
         <el-submenu index="1">
           <template slot="title"><i class="el-icon-message"></i>业务办理</template>
           <el-menu-item-group>
@@ -20,6 +20,14 @@
             <!--          <template slot="title">分组一</template>-->
             <el-menu-item index="2-1"><router-link to="/loginHome/drivingLicence/bind">绑定驾驶证</router-link></el-menu-item>
             <el-menu-item index="2-2"><router-link to="/loginHome/vehicle/bind">绑定车辆</router-link></el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+        <el-submenu index="3">
+          <template slot="title"><i class="el-icon-message"></i>用户信息管理</template>
+          <el-menu-item-group>
+            <!--          <template slot="title">分组一</template>-->
+            <el-menu-item index="3-1"><router-link to="/loginHome/drivingLicence/info">查看我的驾驶证</router-link></el-menu-item>
+            <el-menu-item index="3-2"><router-link to="/loginHome/user/bind">更改密码</router-link></el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>

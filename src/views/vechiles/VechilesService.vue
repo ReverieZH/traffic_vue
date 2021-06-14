@@ -13,13 +13,13 @@
             </a>
           </li>
           <li>
-            <a @click="liclick('cpn')" target="framName">  <div class="img"><img src="@/assets/img/jianyanyuyue.png"></div>
+            <a @click="liclick('cpn')" target="framName">  <div class="img"><img src="@/assets/img/ershouguohu.png"></div>
               <p>本地二手车过户预选号牌</p>
             </a>
           </li>
           <li>
             <a @click="liclick('cpn')" target="framName">
-              <div class="img"><img src="@/assets/img/shenlingmianjian.png"></div>
+              <div class="img"><img src="@/assets/img/yidiqianru.png"></div>
               <p>异地迁入预选号牌</p>
             </a>
           </li>
@@ -54,25 +54,25 @@
 
           <li>
             <a href="noCar.html" target="framName">
-              <div class="img"><img src="@/assets/img/jiashizhengzhuce.png"></div>
+              <div class="img"><img src="@/assets/img/buhuanhaopai.png"></div>
               <p>补换领机动车号牌</p>
             </a>
           </li>
           <li>
             <a href="noCarCheck.html" target="framName">
-              <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
+              <div class="img"><img src="@/assets/img/buhuanxinshizheng.png"></div>
               <p>补换领机动车行驶证</p>
             </a>
           </li>
           <li>
             <a @click="ExemptCheckClick" target="framName">
-              <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
+              <div class="img"><img src="@/assets/img/mianjianshengling.png"></div>
               <p>免检车申领检验标志</p>
             </a>
           </li>
           <li>
             <a @click="UserExemptCheckClick" target="framName">
-              <div class="img"><img src="@/assets/img/jiashizhengbuling.png"></div>
+              <div class="img"><img src="@/assets/img/mianjianshengling.png"></div>
               <p>我的免检车申领</p>
             </a>
           </li>
@@ -120,25 +120,25 @@
         <ul>
           <li>
             <a  @click="applyCheckClick" target="framName">
-              <div class="img"><img src="@/assets/img/weifachuli.png"></div>
+              <div class="img"><img src="@/assets/img/jianyanyuyue.png"></div>
               <p>机动车检验预约</p>
             </a>
           </li>
           <li>
             <a href="auditing.html" target="framName">
-              <div class="img"><img src="@/assets/img/fuakuanjiana.png"></div>
+              <div class="img"><img src="@/assets/img/zhuanjishengqing.png"></div>
               <p>机动车转籍申请</p>
             </a>
           </li>
           <li>
             <a href="auditing.html" target="framName">
-              <div class="img"><img src="@/assets/img/fuakuanjiana.png"></div>
+              <div class="img"><img src="@/assets/img/biangenglianxifengshi.png"></div>
               <p>变更联系方式</p>
             </a>
           </li>
           <li>
             <a  @click="userCheckClick" target="framName">
-              <div class="img"><img src="@/assets/img/weifachuli.png"></div>
+              <div class="img"><img src="@/assets/img/jianyanyuyue.png"></div>
               <p>我的预约</p>
             </a>
           </li>
@@ -173,7 +173,7 @@ export default {
       this.$router.push("userApply")
     },
     applyCheckClick(){
-      this.$router.replace("applyCheck/read")
+      this.$router.replace("applyCheck/chooseCar")
     },
     applyedclick(url){
       this.$router.replace(url)
@@ -182,7 +182,7 @@ export default {
       this.$router.replace("applyCheck/userCheck")
     },
     ExemptCheckClick(){
-      this.$router.replace("exemptCheck/read")
+      this.$router.replace("exemptCheck/chooseCar")
     },
     UserExemptCheckClick(){
       this.$router.replace("exemptCheck/userApply")
